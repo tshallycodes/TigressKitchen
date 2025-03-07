@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.privacy-policy,
+.terms-of-service {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+}
+
+.policy_container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.terms_title {
+    font-size: 32px
+}
+
+.policy_title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: orangered;
+    font-family: "Pacifico", cursive;
+}
+.policy_explain{
+    font-size: 18px;
+}
+.policy_content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.last-edited {
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+    margin-top: 20px;
+}

@@ -1,0 +1,71 @@
+{% extends 'base2.html' %}
+{% block content %}
+  <section class="">
+    <div class="menuspacing"></div>
+    <div class="portion">
+      <img src="../static/img/portionpic.png" alt="" class="portion-img" />
+    </div>
+    <select name="" id="category-select" class="filter-select" onchange="filterProducts()">
+      <option value="all">Select an Option</option>
+      <option value="soups">Soups</option>
+      <option value="rice">Rice</option>
+      <option value="grilled-meat">Grilled Meat</option>
+      <option value="shawarma">Shawarma</option>
+      <option value="porridge">Porridge</option>
+      <option value="specials">Specials</option>
+    </select>
+  </section>
+  
+  <section class="product-section">
+    {% for dish in dishes %}
+      <div class="product-card shadow" id="{{ dish.pid }}">
+        <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="product-img rounded-circle" />
+        <div class="product-name">{{ dish.name }}</div>
+        <div class="product-price">£{{ dish.price }}</div>
+        <span class="addToCart" onclick="openDishModal('{{ dish.image.url }}', '{{ dish.name }}', {{ dish.price }}, '{{ dish.desc }}', {{ dish.pid }})">Add To Cart <i class="fa-solid fa-basket-shopping fa-icon fw-bold mx-1"></i></span>
+      </div>
+    {% endfor %}
+
+    <!-- Modal Structure - Only one modal needed -->
+    <div id="dishModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-flex-container">
+          <div class="modal-left">
+            <img id="modalDishImage" src="" alt="Dish Image" class="modal-img" />
+          </div>
+          <div class="modal-right">
+            <h2 id="modalDishName"></h2>
+            <p id="modalDishDescription"></p>
+            <p class="modal-price"><span id="modalDishPrice"></span></p>
+            <div class="quantity-control">
+              <button class="quantity-btn" id="decrementBtn">-</button>
+              <span id="quantity">1</span>
+              <button class="quantity-btn" id="incrementBtn">+</button>
+            </div>
+            <label for="proteinSelect" class="proteinSelectLabel mt-2">Select Protein:</label>
+            <select id="proteinSelect">
+              <option value="Assorted">Assorted</option>
+              <option value="Chicken">Chicken</option>
+              <option value="Seafood">Seafood</option>
+            </select>
+            <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %} <!-- Cart Popup -->
+    <div id="cartPopup" class="cart-popup">
+      <div class="cart-content">
+        <span class="close-btn" onclick="closeCartPopup()">&times;</span>
+        <h2 style>Your Cart</h2>
+        <div id="cartItemsContainer"></div>
+        <div class="cart-total">
+          <strong>Total:</strong> <span id="cartTotal">0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+  </section> {% endcomment %}
+{% endblock %}

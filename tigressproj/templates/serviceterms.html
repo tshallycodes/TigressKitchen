@@ -1,0 +1,20 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+  <section class="privacy-policy">
+      
+    <div class="policy_container"><h1 class="terms_title">Terms of Services</h1>
+      <span class="policy_explain"></span>
+      <div class="mb-4"></div>
+      {% for terms in terms %}
+      <h1 class="policy_title">{{ terms.title }}</h1>
+      <div class="policy_content">
+        <p>{{ terms.content }}</p>
+      </div>
+      <div class="last-edited">
+        <p>Last Edited: {{ terms.last_edited|date:'F j, Y, g:i a' }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

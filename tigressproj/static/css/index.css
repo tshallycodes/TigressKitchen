@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body{
+    /* background-image: url(/img/13.png);
+    background-repeat: no-repeat;
+    background-size: 100%; */
+}
+
+.indexHeader {
+    width: 100%;
+    height: 300px;
+    background: url(../img/heroimg.png) no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.heroBtn{
+    padding-top: 50px;
+    min-height: 120px;
+}
+.herobtn{
+    color: #f7ecc7;
+    width: 30%;
+    font-size: 40px;
+    padding: 35px 25px;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    /* border: 3px solid black; */
+
+}
+
+.herobtn:hover, .herobtn:focus, .herobtn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: none;
+}
+
+.about{
+    min-height: 700px;
+    /* border-top: 5px solid black; */
+    padding-top: 40px;
+}
+
+.about h1{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    color: orangered;
+
+}
+
+.aboutp{
+    color: #000;
+    width: 55%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.about-offer{
+    color: orangered;
+    font-family: "Pacifico", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px;
+}
+
+.aboutname{
+    color: orangered;
+}
+
+.card{
+    width: 33%;
+    height: 650px;
+    background-color: #000;
+}
+.card-title i{
+    color: orangered;
+}
+
+
+.card-subtitle{
+    font-weight: bold;
+    color: #f7ecc7;
+}
+.card-link{
+    color: white;
+    font-size: 20px;
+    width: 80%;
+    padding: 15px;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    border: 3px solid #f5de94;
+
+
+}
+
+.card-link:hover, .card-link:focus, .card-link:active, .cta:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: none;
+}
+
+.herocard{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    min-height: 400px;
+    background-color: #f7ecc7;
+    border-radius: 15px;
+    padding: 20px;
+
+}
+.card-text{
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+.card-body{
+    height: 400px;
+}
+
+
+/* The Process */
+.process-title{
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    /* background-image: url(../img/theprocess.png); */
+    background-size: cover; /* Adjust the image to cover the entire element */
+    background-position: center; /* Center the image */    
+}
+.process-img{
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/theprocess.png);
+    min-height: 500px;
+    background-size: cover; /* Adjust the image to cover the entire element */
+    background-position: center; /* Center the image */    
+}
+
+/* Gallery */
+.gallery{
+    background-color: #fff;
+    min-height: 1000px;
+}
+
+.gallery-title{
+    color: orangered;
+    font-family: "Pacifico", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 100px 0px 30px 0px;
+}
+
+.photo-gallery{
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.gallery-photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Reviews */
+
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    border: 5px solid orangered;
+    border-radius: 15px;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* Buttons */
+.cta{
+    background-color: green;
+    color: #f7ecc7;
+    width: 40%;
+    font-size: 40px;
+    padding: 25px 15px;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    /* border: 3px solid black; */
+}
+
+
+.cta-title{
+    padding: 10px;
+    text-align: center;
+    color: #f5de94;
+}
+.cta-text{
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 25px;
+
+}
+
+.cta-sec{
+    min-height: 300px;
+}
+@media(max-width: 768px){
+    .photo-gallery{
+        flex-direction: column;
+    }
+}
+
+
+
+/* Responsive Website */
+
+/* For Phone 500px */
+@media (max-width: 500px){
+    .herobtn, .cta{
+        width: 50%;
+        font-size: 20px;
+    }
+    .process-img{
+        background-image: url(../img/mobiletheprocess.png);
+    }
+    .herocard{
+        width: 70%;
+        font-size: 14px;
+        min-height: 600px;
+        display: block;
+
+    }
+    .card-body{
+
+    }
+    .card-subtitle{
+        font-size: 14px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+    .card{
+        font-size: 12px;
+        margin: 15px auto;
+        width: 80%;
+    }
+    .aboutp{
+        font-size: 13px;
+    }
+    .logo{
+        width: 130%;
+    }
+}
+
+/* For Tablet 1100px */
+@media (max-width: 1100px) and (min-width: 501px){
+    .herobtn, .cta{
+        width: 50%;
+        font-size: 40px;
+    }
+    .process-img{
+        background-image: url(../img/mobiletheprocess.png);
+        background-size: cover;
+        min-height: 1100px;
+    }
+    .herocard{
+        width: 70%;
+        font-size: 14px;
+        min-height: 500px;
+
+    }
+    .card{
+        width: 40%;
+    }
+} 
+    
+    /*
+    
+    
+    .card-body{
+
+    }
+    .card-subtitle{
+        font-size: 14px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+    .card{
+        font-size: 12px;
+        margin: 15px auto;
+        width: 80%;
+    }
+    .aboutp{
+        font-size: 13px;
+    }
+    .logo{
+        width: 130%;
+    }
+} */
+
+
+
+
+

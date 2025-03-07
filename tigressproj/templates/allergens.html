@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+  <section class="allergens-section">
+    <h1 class="text-center my-4">Meal Allergens</h1>
+    <div class="allergens-container">
+      {% for dish in dishes %}
+        <div class="allergen-card shadow p-4 mb-4">
+          <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="allergen-img rounded-circle mb-3" />
+          <h2 class="allergen-dish-name">{{ dish.name }}</h2>
+          <p class="allergen-desc">{{ dish.desc }}</p>
+          <p class="allergen-list"><strong>Allergens:</strong> {{ dish.allergens|default:"None specified" }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

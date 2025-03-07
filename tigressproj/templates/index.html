@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <section class="heroBtn">
+            <a href="{% url 'menu' %}" class="herobtn btns">View Menu</a>
+        </section>
+        <!-- About -->
+        <section class="about">
+            <h1 class="about-offer">A little About Us</h1>
+            <p class="aboutp"><span class="aboutname d-inline">Tigress Kitchen</span><span class="d-inline"> a
+                    Nigerian food delivery service that delivers authentic Nigerian dishes to your doorstep. We're more than
+                    just a kitchen; we're a flavorful journey that brings the warmth of home to your table. Picture yourself
+                    savoring the aromas of okra soup or the comforting taste of jollof rice, all expertly crafted with love
+                    and tradition. Our mission? To share the essence of Nigerian cuisine with every corner of the UK. With
+                    our quick delivery service, your cravings for egusi soup or puff puff are just a click away, ensuring
+                    your taste buds dance with delight ASAP!</span>
+            </p>
+            <h3 class="about-offer mx-auto d-flex justify-content-center align-items-center mb-2 mt-3 ">We offer...</h3>
+            <div class="herocard">
+                <div class="card">
+                    <div class="card-body shadow">
+                        <h2 class="card-title"><i class="fa-solid fa-truck"></i></h2>
+                        <h6 class="card-subtitle mb-2">Order Deliveries</h6>
+                        <p class="card-text">Have your favourite meals prepared and delivered to you anywhere in the UK.
+                            Enjoy meals that taste like home right at your doorstep. Just make your pick from our menu!!</p>
+                        <a href="{% url 'menu' %}" class="card-link text-decoration-none btns">View Menu</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body shadow">
+                        <h2 class="card-title"><i class="fa-solid fa-champagne-glasses"></i><i class="fa-solid fa-bowl-food"></i></h2>
+                        <h6 class="card-subtitle mb-2">Event Catering</h6>
+                        <p class="card-text">Savor unforgettable moments with our exquisite event catering. Elevate your
+                            occasion with our delectable cuisine and impeccable service and leave your guests wowed!! </p>
+                        <a href="contact.html" class="card-link text-decoration-none btns bg-success ">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Process -->
+        <section class="process pt-5">
+            <h1 class="about-offer mx-auto d-flex justify-content-center align-items-center mt-5">Our Process</h1>
+            <div class="process-img"></div><!-- <img src="/img/The Process.png" alt="process" class="process-img"> -->
+        </section>
+    
+        <!-- Gallery -->
+        <section class="gallery">
+            <h1 class="gallery-title about-offer">Our Gallery</h1>
+            <div class="container photo-gallery">
+                <div class="column">
+                    <div class="photo"><img class="gallery-photo" src="../static/img/friedrice.jpg" alt=""></div>
+                    <div class="photo"><img class="gallery-photo" src="../static/img/coconut rice.jpg" alt=""></div>
+                    <div class="photo"><img class="gallery-photo" src="../static/img/jellof.jpg" alt=""></div>
+                </div>
+                <div class="column">
+                    <div class="photo"><img class="gallery-photo" src="../static/img/image_50426625.JPG" alt=""></div>
+                    <div class="photo"><img class="gallery-photo" src="../static/img/isiewu.jpg" alt=""></div>
+                    <div class="photo"><img class="gallery-photo" src="../static/img/jellof.jpg" alt=""></div>
+                </div>
+                <div class="column">
+                    <div class="photo"><img class="gallery-photo" src="../static/img/friedrice.jpg" alt=""></div>
+                    <div class="photo"><img class="gallery-photo" src="../static/img/image_50426625.JPG" alt=""></div>
+                    <div class="photo"><img class="gallery-photo" src="../static/img/coconut rice.jpg" alt=""></div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Reviews -->
+        <section class="container">
+            <h1 class="reviews-title about-offer mx-auto d-flex justify-content-center align-items-center mb-2 mt-3">Reviews
+            </h1>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="../static/img/review1.jpg" alt="review">
+                    <img id="slide-2" src="../static/img/review2.jpg" alt="review">
+                    <img id="slide-3" src="../static/img/review3.jpg" alt="review">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-2"></a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Call to Action -->
+        <section class="p-5 cta-sec">
+            <div class="container cta-container">
+                <h1 class="cta-title">Ready to taste the best of Nigerian cuisine?</h1>
+                <!-- <p class="cta-text">We are ready to serve you!!</p> -->
+                <a href="menu.html" class="btns cta">Place an Order!</a>
+            </div>
+        </section>
+
+{% endblock %}

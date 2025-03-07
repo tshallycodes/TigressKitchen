@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+/* Navbar */
+.header {
+    width: 100%;
+    height: 5vh;
+    /* background: url(../img/heroimg.png) no-repeat 50% 50%; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content {
+    padding-top: 30px;
+    /* border-top: #f7ecc7 solid 5px; */
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    position: fixed;
+    float: left;
+    margin: 16px 36px;
+    color: orangered;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: white;
+    padding-top: 40px;
+    padding-right: 30px;
+    text-align: center;
+    margin: 0;
+    transition: 1s;
+    float: right;
+
+}
+
+nav ul li {
+    padding: 15px;
+    /* background: #f7ecc7; */
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    /* border-top-left-radius: 20px;
+    border-top: 2px solid orangered;
+    border-left: 2px solid orangered;
+    border-bottom: 2px solid orangered; */
+}
+
+.navfirst {
+    border-top-left-radius: 10px;
+}
+
+
+.navlastspan i {
+    color: orangered;
+}
+
+.navlastspan {
+    position: relative;
+    /* Allows absolute badge positioning */
+    display: inline-block;
+    color: orangered;
+}
+
+.navlastspan .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav ul li a,
+nav ul li span,
+nav ul li span i {
+    text-decoration: none;
+    color: orangered;
+    /* background-color: #f7ecc7; */
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: "Pacifico", cursive;
+    align-items: center;
+
+}
+
+/* Cart Popup */
+/* Cart popup styling */
+.cart-popup {
+    display: none;
+    /* Hides the popup initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 1000;
+    /* Makes sure it appears on top */
+}
+
+
+.cart-content {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+
+.cart-contenth2 {
+    color: orangered;
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-total,
+.checkout-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.decrement-btn,
+.increment-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+/* Styling for Checkout Button */
+.checkout-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Pacifico", cursive;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #f7ecc7;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.logoimg {
+    max-width: 13%;
+    /* margin-left: 50px; */
+}
+
+
+
+
+
+
+/* Buttons */
+.btns {
+    border-radius: 15px;
+    background-color: orangered;
+    font-family: "Pacifico", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+/* Track Order Popup Styles */
+.track-order-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-order-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.track-close-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+.track-close-btn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.proceed-btn {
+    background-color: orangered;
+    color: #fff;
+    text-decoration: none;
+}
+.proceed-btn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+
+.popup-btn:hover {
+    opacity: 0.9;
+}
+
+
+.footer-logo {
+    font-size: 20px;
+    font-family: "Pacifico", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-logo:hover {
+    color: orangered;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: orangered;
+    font-family: "Pacifico", cursive;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+footer {
+    border-top: orangered 3px solid;
+    background-color: #f7ecc7;
+}
+
+/* Responsive Website */
+
+/* For Phone 500px*/
+@media (max-width: 500px) {
+    .footer-link {
+        font-size: 16px;
+        font-weight: lighter;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+}
+
+/* For Tablet 1240px */
+@media (max-width: 1100px) and (min-width: 501px) {
+    .footer-link {
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+}

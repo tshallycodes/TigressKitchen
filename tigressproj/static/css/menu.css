@@ -1,0 +1,322 @@
+.menuspacing{
+    height: 22vh;
+}
+
+.menu-header{
+    color: orangered;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    font-family: "Pacifico", cursive;
+}
+
+
+.portion{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portion-img{
+    width: 90vw;
+}
+
+.filter-select{
+    border: 5px #f7ecc7 solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: orangered;
+    display: flex;
+    margin: auto;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+option{
+    font-size: 14px;
+}
+
+
+.product-section{
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create flexible grid */
+    gap: 20px;
+}
+.product-card{
+    padding: 10px;
+    /* max-height: 70vh; */
+    /* width: 30%; */
+    border: solid 3px #f7ecc7;
+    border-radius: 15px;
+    /* margin: 25px; */
+    /* justify-content: center; */
+    margin: 30px;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(30px); /* Matches ScrollReveal 'distance' */
+}
+
+.product-img{
+    width: 90%; /* Automatically adjusts to the width of its parent container */
+    max-width: 300px; /* Set a maximum width */
+    height: 60%; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image if necessary to fit the container */
+    border-radius: 15px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* padding-bottom: 15px; */
+}
+.product-name{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.product-price{
+    color: orangered;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.addToCart{
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 3px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Pacifico", cursive;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 3px;
+}
+
+.addToCart:hover{
+    background-color: #f7ecc7;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /*Semi-transparent background */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    width: 70%; /* Adjust to 50-70% based on preference */
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    min-height: 50%;
+}
+
+/* Flex Container for Image and Details */
+.modal-flex-container {
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* Left Side (Image) */
+.modal-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+/* Right Side (Details) */
+.modal-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black; /* Ensure the color contrasts with the background */
+}
+
+.close:hover {
+    color: orangered; /* Adds hover effect for better UX */
+}
+
+
+
+
+
+/* Dropdown for Protein Selection */
+#proteinSelect {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Pacifico", cursive;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #f7ecc7;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+/* Quantity Control */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+
+.portion-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.quantity-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.quantity-btn:hover{
+    background-color:  #f7ecc7;
+}
+
+#quantity {
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Description */
+#modalDishDescription{
+    font-size: 14px;
+    min-height: 15%;
+}
+
+.modal-price{
+    font-weight: bold;
+    font-size: 24px;
+    color: orangered;
+    margin: 0;
+}
+
+.proteinSelectLabel{
+    font-size: 19px;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Cart Popup */
+/* Cart popup styling */
+.cart-popup {
+    display: none; /* Hides the popup initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Makes sure it appears on top */
+}
+
+
+.cart-content {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+
+.cart-contenth2{
+    color: orangered;
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-total, .checkout-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+

@@ -1,0 +1,107 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="nigerian food, tigress kitchen, food, african kitchen" />
+    <meta name="description" content="Have your delicious and authentic nigerian dishes delivered to your doorstep anywhere in the UK." />
+    <meta name="author" content="Tigress Kitchen" />
+    <title>Tigress Kitchen</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '../static/img/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '../static/img/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '../static/img/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static '../static/img/site.webmanifest' %}" />
+    <link rel="stylesheet" href="{% static '../static/css/menu.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/css/contact.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/css/allergens.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/css/policy_and_terms.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/fawesome/fawecss/fontawesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/node_modules/bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' %}" />
+    <link rel="stylesheet" href="{% static '../static/node_modules/bootstrap/dist/js/bootstrap.min.js' %}" />
+    <link rel="stylesheet" href="{% static '../static/fawesome/fawecss/all.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/fawesome/fawecss/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static '../static/fawesome/fawecss/fontawesome.min.css' %}" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{% static '../static/js/script.js' %}" defer></script>
+    <script src="{% static '../static/js/menu.js' %}" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav>
+          <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static '../static/img/logotext.png' %}" alt="Tigress Kitchen" class="logoimg rounded-circle p-2" /></a>
+          </div>
+          <div class="nav-pages">
+            <ul class="thenavlinks">
+              <!-- <li><a href="index.html' %}">Home</a></li> -->
+              <li>
+                <a href="{% url 'menu' %}" class="navfirst">Menu</a>
+              </li>
+              <li>
+                <a href="https://instagram.com/tigresskitchen_" class="nav-icons"><i class="fa-brands fa-instagram fa-icon fw-bold" style=""></i></a>
+              </li>
+              <li>
+                <a href="{% url 'contact' %}" class="nav-icons"><i class="fa-regular fa-comments fa-icon fw-bold" style=""></i></a>
+              </li>
+              <li class="navlast">
+                <span href="" onclick="openCartPopup()" class="nav-icons navlastspan"><i class="fa-solid fa-basket-shopping fa-icon fw-bold" style=""></i><span id="cartBadge" class="badge">0</span></span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="content thecontent">
+        {% block content %}
+
+        {% endblock %}
+        <!-- Cart Popup -->
+        <div id="cartPopup" class="cart-popup">
+          <div class="cart-content">
+            <span class="close-btn" onclick="closeCartPopup()">&times;</span>
+            <h2 style>Your Cart</h2>
+            <div id="cartItemsContainer"></div>
+            <div class="cart-total">
+              <strong>Total:</strong> <span id="cartTotal">0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center text-lg-start">
+        <div class="text-center p-3">
+          <a class="footer-link p-2 fw-bold" href="{% url 'menu' %}">Menu</a>
+          <a class="footer-link p-2 fw-bold" href="{% url 'serviceterms' %}">Terms of Service</a>
+          <a class="footer-link p-2 fw-bold" href="{% url 'policy' %}">Privacy Policy</a>
+          <a class="footer-link p-2 fw-bold" href="https://instagram.com/tigresskitchen_">IG</a>
+          <a class="footer-link p-2 fw-bold" href="#" onclick="showTrackOrderPopup()">Track Order</a>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3 fw-bold copyright" style="background-color: #f7ecc7; color: rgb(255, 69, 0)">
+          © 2024 Copyright:
+          <a class="footer-logo text-black" href="{% url 'home' %}">Tigress Kitchen</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+      <!-- Track Order Popup -->
+      <div id="trackOrderPopup" class="track-order-popup">
+        <div class="track-order-content">
+          <p>This link leads to the Royal Mail website. You will need your reference number. Do you wish to continue?</p>
+          <div class="popup-buttons">
+            <button class="popup-btn track-close-btn" onclick="closeTrackOrderPopup()">Close</button>
+            <a href="https://www.royalmail.com/track-your-item" target="_blank" class="popup-btn proceed-btn">Proceed</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static '../static/js/main.js' %}"></script>
+  </body>
+</html>

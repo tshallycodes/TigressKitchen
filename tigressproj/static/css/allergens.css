@@ -1,0 +1,32 @@
+.allergens-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.allergens-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.allergen-card {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.allergen-img {
+    width: 100px;
+    height: 100px;
+}
+
+.allergen-dish-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.allergen-list {
+    color: #555;
+}
